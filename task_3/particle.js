@@ -5,10 +5,10 @@ class Particle {
     this.velocity = p5.Vector.random2D();
     this.acceleration = createVector();
     this.maxspeed = 20;
-    this.maxforce = 1;
-    this.mass = random(20);
+    this.maxforce = 2;
+    this.mass = random(2,7);
     this.mu = 0.5; //Reibunskoeffizient
-    this.color = 255;
+    this.color = random(255);
   }
 
 
@@ -24,7 +24,7 @@ class Particle {
   }
 
   display() {
-    stroke(this.color);
+    fill(this.color,180,180);
     strokeWeight(this.r);
     ellipse(this.position.x, this.position.y, this.mass, this.mass);
   }
